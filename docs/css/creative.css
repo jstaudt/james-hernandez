@@ -157,21 +157,29 @@ aside {
   }
 }
 header {
-  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  flex-flow: nowrap;
+  height: 110rem;
+  min-width: 25rem;
+  margin-top: -60px;
+  flex: 1;
   width: 100%;
   min-height: auto;
   -webkit-background-size: cover;
-  /* -moz-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-position: center; */
-  background-image: url('../img/james-leo.jpg');
+  /* background-position: center; */
+  background-image: url('../img/shoulders.jpg');
   text-align: center;
   color: white;
-  background-position: 0 -208px;
+  /* background-position: 0 -208px; */
 }
 header .header-content {
-  position: relative;
+  /* position: relative; */
   text-align: center;
   padding: 100px 15px 100px;
   width: 100%;
@@ -181,8 +189,18 @@ header .header-content .header-content-inner h1 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 30px;
+  font-size: 50px;
 }
+@media only screen
+        and (min-device-width: 320px)
+        and (max-device-width: 480px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+          header .header-content .header-content-inner h1 {
+            font-size: 30px;
+          }
+}
+
+
 
 header .header-content .header-content-inner hr {
   margin: 30px auto;
@@ -198,46 +216,47 @@ header .header-content .header-content-inner p {
         and (max-device-width: 480px)
         and (-webkit-min-device-pixel-ratio: 2) {
           header {
-            min-height: 100%;
-            background-position: 0 0px;
-            background-repeat: no-repeat;
+            height: 80rem;
+            margin-top: 0;
+          }
+}
+
+header .header-content .header-content-inner {
+  margin-bottom: 25rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen
+        and (min-device-width: 320px)
+        and (max-device-width: 480px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+          header .header-content .header-content-inner {
+            margin-bottom: 0;
           }
 
-          .header-content {
-            top: 150px;
-          }
+  }
+
+/* header .header-content .header-content-inner h1 {
+  font-size: 50px;
 }
+header .header-content .header-content-inner p {
+  font-size: 18px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
 @media (min-width: 768px) {
-  header {
-    min-height: 100%;
-    background-position: 0 -128px;
-  }
-  header .header-content {
-    position: absolute;
-    top: 70%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    padding: 0 50px;
-  }
-  header .header-content .header-content-inner {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 250px;
-  }
-  header .header-content .header-content-inner h1 {
-    font-size: 50px;
-  }
-  header .header-content .header-content-inner p {
-    font-size: 18px;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
+}
+
+#about .container {
+  margin-top: 5rem;
 }
 .section-heading {
-  margin-top: 0;
+  margin-top: 20px;
 }
 .service-box {
   max-width: 400px;
@@ -364,6 +383,7 @@ fieldset[disabled] .btn-default.active {
   background-color: #222222;
 }
 .btn-primary {
+  width: 145px;
   color: white;
   background-color: #F05F40;
   border-color: #F05F40;
